@@ -2,7 +2,10 @@ const func = require('../../funtions')
 
 describe('FizzBuzz',()=>{
     it('should throw error  When Input not a number',()=>{
-        expect(()=>{func.fizzBuzz('0') }).toThrow()
+        expect(()=>{func.fizzBuzz('0') }).toThrow();
+		expect(()=>{func.fizzBuzz(null) }).toThrow();
+		expect(()=>{func.fizzBuzz(undefined) }).toThrow();
+		expect(()=>{func.fizzBuzz({}) }).toThrow();
     })
 
     it('should return FizzBuzz When Input %3 and %5 = 0',()=>{
